@@ -6,7 +6,7 @@
     <title>Ramadhan Kareem</title>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet" /> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="zakat.css">
 </head>
 <body>
     <header>
@@ -18,6 +18,9 @@
 
     <nav class="nav-tabs">
         <a href="index.html" class="tab-link">
+            <i class="bi bi-house-door-fill"></i> <span>Home</span>
+        </a> 
+        <a href="jadwal.html" class="tab-link">
             <i class="bi bi-clock-fill"></i> <span>Imsakiyah</span>
         </a> 
         <a href="doa.html#doa-ramadhan">
@@ -36,8 +39,7 @@
 
     <main>
         <section class="zakat-card">
-            <h2>Hitung Zakat Anda</h2>
-            
+            <h2>Hitung Zakat Anda</h2>            
             <div class="form-input">
                 <label for="zakat-type">Jenis Zakat</label>
                 <select id="zakat-type">
@@ -68,9 +70,11 @@
                     <input type="number" id="total-emas" placeholder="0">
                 </div>
             </div>
-
-            <button id="btn-hitung">Hitung Zakat</button>
-            <button id="btn-reset-zakat" class="btn-reset-zakat">Reset Form</button>
+            
+            <div class="zakat-controls">
+                <button id="btn-hitung">Hitung Zakat</button>
+                <button id="btn-reset-zakat" class="btn-reset-zakat">Reset Form</button>
+            </div>
 
             <div id="result-box" class="result-box" style="display: none;">
                 <h3>Hasil Perhitungan</h3>

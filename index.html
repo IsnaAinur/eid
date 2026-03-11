@@ -3,89 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramadhan Kareem</title>
+    <title>Ramadhan Portal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
     <header>
-        <div class="header-ornament">
-            <i class="bi bi-moon-stars-fill"></i>
-        </div>
-        <h1>Ramadhan Kareem</h1>
+        <nav class="navbar">
+            <div class="nav-logo"> <i class="bi bi-moon-stars-fill"></i> Ramadhan Kareem</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="jadwal.html">Jadwal Imsakiyah</a></li>
+                <li><a href="doa.html#doa-ramadhan">Doa Sahur & Buka</a></i>
+                <li><a href="zikir.html">Zikir</a></li>
+                <li><a href="zakat.html">Zakat</a></li>
+                <li><a href="todolist.html">To Do List</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="nav-tabs">
-        <a href="index.html" class="tab-link">
-            <i class="bi bi-clock-fill"></i> <span>Imsakiyah</span>
-        </a> 
-        <a href="doa.html#doa-ramadhan">
-            <i class="bi bi-moon-stars-fill"></i> <span>doa</span>
-        </a>
-        <a href="zikir.html">
-            <i class="bi bi-book-fill"></i> <span>Zikir</span>
-        </a>
-        <a href="zakat.html">
-            <i class="bi bi-calculator"></i> <span>Zakat</span>
-        </a>
-        <a href="todolist.html" class="tab-link">
-            <i class="bi bi-check2-square"></i> <span>To Do List</span>
-        </a>    
-    </nav>
-
     <main>
-        <div class="card selector-card">
-            <div class="selection-row">
-                <div class="input-group flex-1">
-                    <label class="input-label"><i class="bi bi-geo-alt-fill"></i> Pilih Kota</label>
-                    <select id="citySelect" class="input-field" style="cursor: pointer;">
-                        <option value="">Memuat daftar kota...</option>
-                    </select>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Selamat Datang di Ramadhan Portal</h1>
+                <p>Panduan lengkap ibadah Anda dalam satu website. Temukan jadwal insakiyah, doa selama bulan ramadhan, dan fitur pendukung lainnya di sini.</p>
+                <a href="#fitur" class="btn-hero">Jelajahi Fitur</a>
+            </div>
+        </section>
+
+        <section id="fitur" class="features-section">
+            <h2 class="section-title">Fitur Website</h2>
+            <div class="features-grid">
+                
+                <div class="feature-card">
+                    <div class="card-icon"><i class="bi bi-clock-fill"></i></div>
+                    <h3>Jadwal Imsakiyah</h3>
+                    <p>Pantau waktu imsak, buka puasa, dan jadwal shalat secara akurat.</p>
+                    <a href="jadwal.html" class="btn-card">Lihat</a>
                 </div>
 
-                <div class="input-group flex-1" style="position: relative;">
-                    <label class="input-label"><i class="bi bi-search"></i> Cari Kota</label>
-                    <input type="text" id="citySearch" class="input-field" placeholder="Ketik nama kota..." autocomplete="off">
-                    
-                    <div id="searchSuggestions" class="search-results d-none"></div>
+                <div class="feature-card">
+                    <div class="card-icon"><i class="bi bi-book-fill"></i></div>
+                    <h3>Doa</h3>
+                    <p>Kumpulan doa-doa penting selama bulan suci Ramadhan.</p>
+                    <a href="doa.html#doa-ramadhan" class="btn-card">Lihat</a>
                 </div>
-            </div>
-        </div>
 
-        <div id="statusArea" class="status-container">
-            <div id="loadingMsg" class="loading-spinner d-none">
-                <div class="spinner"></div>
-                <p>Memuat data jadwal...</p>
-            </div>
-            <div id="errorMsg" class="error-box d-none">
-                <i class="bi bi-exclamation-triangle-fill"></i>
-                <p>Gagal memuat data. Periksa koneksi internet Anda.</p>
-            </div>
-        </div>
+                <div class="feature-card">
+                    <div class="card-icon"><i class="bi bi-book-fill"></i></div>
+                    <h3>Zikir</h3>
+                    <p>Ramadhan adalah bulan yang penuh keberkahan.</p>
+                    <a href="zikir.html" class="btn-card">Lihat</a>
+                </div>
 
-        <div class="table-responsive card">
-            <table id="imsakiyahTable">
-                <thead>
-                    <tr>
-                        <th>Tanggal</th>
-                        <th>Imsak</th>
-                        <th>Subuh</th>
-                        <th>Dzuhur</th>
-                        <th>Ashar</th>
-                        <th>Maghrib</th>
-                        <th>Isya</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    </tbody>
-            </table>
-        </div>
+                <div class="feature-card">
+                    <div class="card-icon"><i class="bi bi-calculator"></i></div>
+                    <h3>Zakat</h3>
+                    <p>Hitung zakat yang harus anda keluarkan dengan mudah.</p>
+                    <a href="zakat.html" class="btn-card">Lihat</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon"><i class="bi bi-check2-square"></i></div>
+                    <h3>To Do List</h3>
+                    <p>Manfaatkan waktu anda secara efektif selama bulan Ramadhan.</p>
+                    <a href="todolist.html" class="btn-card">Lihat</a>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>Ramadhan Kareem - Semoga ibadah puasa kita diterima Allah SWT.</p>
+        <h3>Ramadhan Kareem - Semoga ibadah puasa kita diterima Allah SWT. </h3> <p>&copy; 2026 Ramadhan Portal.</p>
     </footer>
 
-    <script src="index.js"></script>
 </body>
 </html>
