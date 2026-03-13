@@ -8,7 +8,7 @@ Web ini memiliki beberapa fitur utama seperti :
 
 Cara penggunaan :
 1. Akses Aplikasi:
-- Buka URL live proyek melalui browser di ponsel atau komputer Anda.
+- Buka URL live proyek melalui browser.
 - Pastikan perangkat terhubung ke internet agar fitur jadwal shalat dapat memuat data terbaru secara otomatis.
 
 2. Melihat Jadwal Imsakiyah:
