@@ -86,7 +86,11 @@ header h1 {
   top: 0;
   z-index: 100;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
   background: rgba(26, 61, 43, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -105,6 +109,13 @@ header h1 {
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
   white-space: nowrap;
+}
+
+.nav-tabs::-webkit-scrollbar { display: none; }
+
+.nav-tabs a, .nav-item-dropdown {
+  flex: 0 0 auto;
+  padding: 15px 20px;
 }
 
 .nav-tabs a i { color: var(--gold-light); }
@@ -264,4 +275,35 @@ footer p {
   color: var(--gold-light);
   letter-spacing: 2px;
   font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .zikir-container {
+        padding: 25px 15px; /* Kurangi padding agar lebih luas */
+        margin: 10px;
+    }
+
+    .count-display {
+        font-size: 5rem; /* Ukuran angka sedikit diperkecil agar pas */
+    }
+
+    .zikir-target {
+        font-size: 1rem;
+    }
+
+    .zikir-controls {
+        flex-direction: column; /* Tombol jadi atas-bawah */
+        gap: 12px;
+    }
+
+    .btn-zikir {
+        width: 100%; /* Tombol lebar penuh */
+        padding: 15px;
+        justify-content: center;
+    }
+
+    .btn-main-zikir {
+        width: 180px; /* Ukuran tombol utama disesuaikan */
+        height: 180px;
+    }
 }

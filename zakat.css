@@ -83,7 +83,11 @@ header h1 {
   top: 0;
   z-index: 100;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
   background: rgba(26, 61, 43, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -104,6 +108,13 @@ header h1 {
   white-space: nowrap;
 }
 
+.nav-tabs::-webkit-scrollbar { display: none; }
+
+.nav-tabs a, .nav-item-dropdown {
+  flex: 0 0 auto;
+  padding: 15px 20px;
+}
+
 .nav-tabs a i { color: var(--gold-light); }
 
 .nav-tabs a:hover {
@@ -113,9 +124,11 @@ header h1 {
 
 /* ZAKAT */
 .zakat-card {
+  width: 100%;
+  max-width: 550px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  padding: 2.5rem;
+  padding: 20px;
   border-radius: 24px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.1);
   border: 1px solid var(--gold-light);
@@ -169,9 +182,10 @@ input:focus, select:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   margin-top: 20px;
   width: 100%;
+  flex-direction: column;
 }
 
 button#btn-hitung {

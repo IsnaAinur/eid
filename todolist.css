@@ -157,6 +157,7 @@ header h1 {
   border: 1px solid var(--gold-dark);
   border-radius: 8px;
   top: 100%;
+  left: 0;
 }
 
 .dropdown-content button {
@@ -192,6 +193,12 @@ header h1 {
     transform: one;
     width: 100%;
     border-radius: 0;
+  }
+
+  .nav-tabs{
+    justify-content: flex-start; /* mulai dari kiri */
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
 

@@ -79,7 +79,11 @@ header h1 {
   top: 0;
   z-index: 100;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
   background: rgba(26, 61, 43, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -98,6 +102,18 @@ header h1 {
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
   white-space: nowrap;
+}
+
+main {
+  max-width: 100%;
+  padding: 20px 15px;
+}
+
+.nav-tabs::-webkit-scrollbar { display: none; }
+
+.nav-tabs a, .nav-item-dropdown {
+  flex: 0 0 auto;
+  padding: 15px 20px;
 }
 
 .nav-tabs a i { color: var(--gold-light); }
@@ -119,8 +135,10 @@ header h1 {
 }
 
 .table-responsive {
+  width: 100%;
   overflow-x: auto;
   border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
   background: white;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }

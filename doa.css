@@ -43,9 +43,19 @@ body::before {
 }
 
 @media (max-width: 768px) {
-  article.doa-card { flex-direction: column; }
-  .card-arabic { font-size: 1.8rem; }
-  .nav-tabs a { padding: 15px; font-size: 0.7rem; }
+  article.doa-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .card-arabic {
+    font-size: 1.6rem;
+    text-align: right;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
 }
 
 /* HEADER */
@@ -96,7 +106,11 @@ header h1 {
   top: 0;
   z-index: 100;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
   background: rgba(26, 61, 43, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -115,6 +129,13 @@ header h1 {
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
   white-space: nowrap;
+}
+
+.nav-tabs::-webkit-scrollbar { display: none; }
+
+.nav-tabs a, .nav-item-dropdown {
+  flex: 0 0 auto;
+  padding: 15px 20px;
 }
 
 .nav-tabs a i { color: var(--gold-light); }
@@ -138,11 +159,8 @@ header h1 {
 }
 
 main {
-  position: relative;
-  z-index: 1;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 60px 20px 80px;
+  max-width: 100%;
+  padding: 20px 15px;
 }
 
 .doa-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
